@@ -41,6 +41,12 @@ public class Main {
      * @return el número entero escrito por el usuario.
      */
     // TODO escribe el método pedirNumeroEnRango para que haga lo que se indica en el comentario
+    private static int pedirNumeroEnRango(Scanner entrada, int min ,int max,String mensaje) {
+        int numero;
+        System.out.print(mensaje);
+        numero = entrada.nextInt();
+        return numero;
+    }
 
     /**
      * Muestra un menú de opciones al usuario:
@@ -54,12 +60,23 @@ public class Main {
      * @return número entero: 1 (piedra), 2 (papel), 3 (tijera).
      */
     // TODO escribe el método pedirOpcionUsuario para que haga lo que se indica en el comentario
+    private static int pedirOpcionUsuario(Scanner entrada) {
+        int opcion;
+       System.out.println("1.- Piedra");
+       System.out.println("2.- Papel");
+       System.out.println("3.- Tijera");
+       opcion = entrada.nextInt();
+       return opcion;
 
     /**
      * Genera un número aleatorio entre 1 y 3 que represente la opción de la máquina.
      * @return número entero: 1 (piedra), 2 (papel), 3 (tijera).
      */
     // TODO escribe el método generarOpcionMaquina para que haga lo que se indica en el comentario
+        private static int generarOpcionMaquina() {
+            int numero = (int)Math.random() * 3 + 1;
+            return numero;
+        }
 
     /**
      * Calcula quién ha ganado una partida a piedra, papel o tijera.
@@ -79,6 +96,11 @@ public class Main {
      *         devuelve 0 si han empatado (misma opción).
      */
     // TODO escribe el método calcularVictoria para que haga lo que se indica en el comentario
+        private static int calcularVictoria(int jugador1,int jugador2) {
+            if () {
+
+            }
+        }
 
     /**
      * Muestra por pantalla el resultado de una partida.
