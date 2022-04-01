@@ -73,7 +73,7 @@ public class Main {
      * @return número entero: 1 (piedra), 2 (papel), 3 (tijera).
      */
     // TODO escribe el método generarOpcionMaquina para que haga lo que se indica en el comentario
-        private static int generarOpcionMaquina() {
+        private static int generarOpcionMaquina(){
             int numero = (int)Math.random() * 3 + 1;
             return numero;
         }
@@ -97,11 +97,28 @@ public class Main {
      */
     // TODO escribe el método calcularVictoria para que haga lo que se indica en el comentario
         private static int calcularVictoria(int jugador1,int jugador2) {
-            if () {
-
+            if (jugador1 == 1 && jugador2 == 2) {
+                return 2;
+            }
+            if (jugador1 == 1 && jugador2 == 3) {
+                return 1;
+            }
+            if (jugador1 == 2 && jugador2 = 1) {
+                return 1;
+            }
+            if (jugador1 == 2 && jugador2 = 3) {
+                return 2;
+            }
+            if (jugador1 == 3 && jugador2 = 1) {
+                return 1;
+            }
+            if (jugador1 == 3 && jugador2 = 2) {
+                return 2;
+            } else {
+                return 0;
+            }
             }
         }
-
     /**
      * Muestra por pantalla el resultado de una partida.
      *
@@ -112,6 +129,9 @@ public class Main {
      * @param opcion2 la opción elegida por el jugador 2.
      */
     // TODO escribe el método mostrarResultado para que haga lo que se indica en el comentario
+    private static int mostrarResultado(int victoria,String nombre1,int opcion1,String nombre2,int opcion2) {
+
+    }
 
     /**
      * Asume que el parámetro opción es 1, 2 o 3, de manera que si se pasa otro número
