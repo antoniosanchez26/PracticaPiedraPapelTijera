@@ -43,8 +43,11 @@ public class Main {
     // TODO escribe el método pedirNumeroEnRango para que haga lo que se indica en el comentario
     private static int pedirNumeroEnRango(Scanner entrada, int min ,int max,String mensaje) {
         int numero;
-        System.out.print(mensaje);
-        numero = entrada.nextInt();
+        do {
+            System.out.print(mensaje);
+            numero = entrada.nextInt();
+        } while (numero < min || numero > max);
+
         return numero;
     }
 
@@ -62,21 +65,23 @@ public class Main {
     // TODO escribe el método pedirOpcionUsuario para que haga lo que se indica en el comentario
     private static int pedirOpcionUsuario(Scanner entrada) {
         int opcion;
-       System.out.println("1.- Piedra");
-       System.out.println("2.- Papel");
-       System.out.println("3.- Tijera");
-       opcion = entrada.nextInt();
-       return opcion;
+        System.out.println("1.- Piedra");
+        System.out.println("2.- Papel");
+        System.out.println("3.- Tijera");
+        System.out.print("Dame una opción: ");
+        opcion = entrada.nextInt();
+        return opcion;
+    }
 
     /**
      * Genera un número aleatorio entre 1 y 3 que represente la opción de la máquina.
      * @return número entero: 1 (piedra), 2 (papel), 3 (tijera).
      */
     // TODO escribe el método generarOpcionMaquina para que haga lo que se indica en el comentario
-        private static int generarOpcionMaquina(){
-            int numero = (int)Math.random() * 3 + 1;
-            return numero;
-        }
+    private static int generarOpcionMaquina() {
+        int numero = (int) Math.random() * 3 + 1;
+        return numero;
+    }
 
     /**
      * Calcula quién ha ganado una partida a piedra, papel o tijera.
@@ -96,29 +101,29 @@ public class Main {
      *         devuelve 0 si han empatado (misma opción).
      */
     // TODO escribe el método calcularVictoria para que haga lo que se indica en el comentario
-        private static int calcularVictoria(int jugador1,int jugador2) {
-            if (jugador1 == 1 && jugador2 == 2) {
-                return 2;
-            }
-            if (jugador1 == 1 && jugador2 == 3) {
-                return 1;
-            }
-            if (jugador1 == 2 && jugador2 = 1) {
-                return 1;
-            }
-            if (jugador1 == 2 && jugador2 = 3) {
-                return 2;
-            }
-            if (jugador1 == 3 && jugador2 = 1) {
-                return 1;
-            }
-            if (jugador1 == 3 && jugador2 = 2) {
-                return 2;
-            } else {
-                return 0;
-            }
-            }
+    private static int calcularVictoria(int jugador1, int jugador2) {
+        if (jugador1 == 1 && jugador2 == 2) {
+            return 2;
         }
+        if (jugador1 == 1 && jugador2 == 3) {
+            return 1;
+        }
+        if (jugador1 == 2 && jugador2 == 1) {
+            return 1;
+        }
+        if (jugador1 == 2 && jugador2 == 3) {
+            return 2;
+        }
+        if (jugador1 == 3 && jugador2 == 1) {
+            return 1;
+        }
+        if (jugador1 == 3 && jugador2 == 2) {
+            return 2;
+        }
+
+        return 0;
+    }
+
     /**
      * Muestra por pantalla el resultado de una partida.
      *
@@ -130,7 +135,8 @@ public class Main {
      */
     // TODO escribe el método mostrarResultado para que haga lo que se indica en el comentario
     private static int mostrarResultado(int victoria,String nombre1,int opcion1,String nombre2,int opcion2) {
-
+        if () {
+        }
     }
 
     /**
