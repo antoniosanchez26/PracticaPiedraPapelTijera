@@ -135,8 +135,12 @@ public class Main {
      */
     // TODO escribe el método mostrarResultado para que haga lo que se indica en el comentario
     private static int mostrarResultado(int victoria,String nombre1,int opcion1,String nombre2,int opcion2) {
-        if () {
+        if (victoria == 1) {
+            System.out.print("Ha ganado el jugador 1");
+        } else if (victoria == 2) {
+            System.out.print("Ha ganado el jugador 2");
         }
+
     }
 
     /**
@@ -147,4 +151,7 @@ public class Main {
      * @return el nombre de la opción elegida: 1 = Piedra, 2 = Papel, 3 = Tijera
      */
     // TODO escribe el método nombreOpcion para que haga lo que se indica en el comentario
+    private static int nombreOpcion(int opcion) {
+
+    }
 }
